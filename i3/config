@@ -73,8 +73,8 @@ bindsym $mod+a focus parent
 # workspaces
 set $workspace1 Main
 set $workspace2 Comms
-set $workspace3 3
-set $workspace4 Music
+set $workspace3 Music
+set $workspace4 4
 set $workspace5 5
 set $workspace6 6
 set $workspace7 7
@@ -116,7 +116,7 @@ assign [class="Slack"] Comms
 assign [class="Cutegram"] Comms
 
 #colors
-set $bg-color 	         #2f343f  
+set $bg-color 	         #2f343f
 set $inactive-bg-color   #2f343f
 set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
@@ -180,7 +180,7 @@ mode "$mode_launcher" {
 	bindsym c exec google-chrome-stable, mode "default"
 	bindsym e exec evolution, workspace Comms, mode "default"
 	bindsym s exec slack, workspace Comms, mode "default"
-	bindsym g exec cutegram, workspace Comms, mode "default" 
+	bindsym g exec cutegram, workspace Comms, mode "default"
 	bindsym n exec simplenote, mode "default"
 
 	bindsym Escape mode "default"
