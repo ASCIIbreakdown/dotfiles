@@ -1,9 +1,6 @@
 #set the mod key
 set $mod Mod4
 
-#thin borders
-hide_edge_borders both
-
 #border settings
 new_window normal
 
