@@ -78,7 +78,7 @@ bindsym $mod+a focus parent
 set $workspace1 Main
 set $workspace2 Comms
 set $workspace3 3
-set $workspace4 4
+set $workspace4 Music
 set $workspace5 5
 set $workspace6 6
 set $workspace7 7
@@ -210,3 +210,8 @@ exec_always feh --bg-max ~/Pictures/rope.png
 
 #drop down terminal
 bindsym XF86Tools exec xfce4-terminal --drop-down
+
+#media keys
+bindsym XF86AudioPlay exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
+bindsym XF86AudioNext exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
+bindsym XF86AudioPrev exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
