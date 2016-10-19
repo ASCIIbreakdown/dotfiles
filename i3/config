@@ -178,13 +178,14 @@ bar {
 for_window [class=".*"] title_format "<b>%title</b> (%class)"
 
 #shortcut launcher
-set $mode_launcher Launch: [f]irefox [c]hrome [s]lack simple[n]ote
+set $mode_launcher Launch: [f]irefox [c]hrome [s]lack [t]elegram
 bindsym $mod+o mode "$mode_launcher"
 mode "$mode_launcher" {
 	bindsym c exec google-chrome-stable, mode "default"
-	bindsym s exec slack, workspace Comms, mode "default"
-	bindsym n exec simplenote, mode "default"
+	bindsym s workspace Comms, exec slack, mode "default"
+  bindsym t workspace Comms, exec telegram, mode "default"
   bindsym f exec firefox, mode "default"
+  bindsym shift+f workspace Main, exec firefox, mode "default"
 
 	bindsym Escape mode "default"
 	bindsym Return mode "default"
