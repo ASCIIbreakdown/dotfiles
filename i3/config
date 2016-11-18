@@ -32,7 +32,7 @@ bindsym $mod+Shift+d exec dmenu_run -sb "#2F343F"
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop 
 
 #lock the screen
-bindsym $mod+Shift+x exec ~/.config/i3/lock.sh
+#bindsym $mod+Shift+x exec ~/.config/i3/lock.sh
 
 # change focus
 bindsym $mod+j focus left
@@ -69,22 +69,22 @@ bindsym $mod+space focus mode_toggle
 floating_modifier $mod
 
 # focus the parent container
-bindsym $mod+a focus parent
+#bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
 
 # workspaces
-set $workspace1 Main
-set $workspace2 Comms
-set $workspace3 3
-set $workspace4 Music
-set $workspace5 5
-set $workspace6 6
-set $workspace7 7
-set $workspace8 8
-set $workspace9 9
-set $workspace10 10
+set $workspace1 1:Main
+set $workspace2 2:Comms
+set $workspace3 3:3
+set $workspace4 4:Music
+set $workspace5 5:5
+set $workspace6 6:6
+set $workspace7 7:7
+set $workspace8 8:8
+set $workspace9 9:9
+set $workspace10 10:10
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
@@ -162,10 +162,11 @@ bindsym $mod+r mode "resize"
 # i3bar
 bar {
         #status_command i3status
+  strip_workspace_numbers yes
 	status_command i3blocks -c ~/.config/i3/i3blocks.conf
 	colors {
 		background $bg-color
-	    	separator #757575
+	  separator #757575
 		#                  border             background         text
 		focused_workspace  $bg-color          $bg-color          $text-color
 		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
@@ -201,6 +202,8 @@ exec compton
 bindsym XF86Launch6 exec amixer -D pulse set Master 5%+ unmute; exec pkill -RTMIN+10 i3blocks
 bindsym XF86Launch7 exec amixer -D pulse set Master 5%-; exec pkill -RTMIN+10 i3blocks
 bindsym XF86Launch8 exec amixer -D pulse set Master toggle; exec pkill -RTMIN+10 i3blocks
+bindsym --whole-window --border $mod+button5 exec amixer -D pulse set Master 5%-; exec pkill -RTMIN+10 i3blocks
+bindsym --whole-window --border $mod+button4 exec amixer -D pulse set Master 5%+ unmute; exec pkill -RTMIN+10 i3blocks
 
 #keyindicator
 bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
@@ -216,3 +219,30 @@ bindsym XF86Tools exec xfce4-terminal --drop-down
 bindsym XF86AudioPlay exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
 bindsym XF86AudioNext exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
 bindsym XF86AudioPrev exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
+
+#scratchpad
+bindsym $mod+Shift+s scratchpad show
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+x [title="Telegram"] scratchpad show
+bindsym $mod+Shift+a mark "scratchpadAlpha", move scratchpad
+bindsym $mod+a [con_mark="scratchpadAlpha"] scratchpad show
+bindsym $mod+Shift+KP_0 mark "scratchpad0", move scratchpad
+bindsym $mod+KP_0 [con_mark="scratchpad0"] scratchpad show
+bindsym $mod+Shift+KP_1 mark "scratchpad1", move scratchpad
+bindsym $mod+KP_1 [con_mark="scratchpad1"] scratchpad show
+bindsym $mod+Shift+KP_2 mark "scratchpad2", move scratchpad
+bindsym $mod+KP_2 [con_mark="scratchpad2"] scratchpad show
+bindsym $mod+Shift+KP_3 mark "scratchpad3", move scratchpad
+bindsym $mod+KP_3 [con_mark="scratchpad3"] scratchpad show
+bindsym $mod+Shift+KP_4 mark "scratchpad4", move scratchpad
+bindsym $mod+KP_4 [con_mark="scratchpad4"] scratchpad show
+bindsym $mod+Shift+KP_5 mark "scratchpad5", move scratchpad
+bindsym $mod+KP_5 [con_mark="scratchpad5"] scratchpad show
+bindsym $mod+Shift+KP_6 mark "scratchpad6", move scratchpad
+bindsym $mod+KP_6 [con_mark="scratchpad6"] scratchpad show
+bindsym $mod+Shift+KP_7 mark "scratchpad7", move scratchpad
+bindsym $mod+KP_7 [con_mark="scratchpad7"] scratchpad show
+bindsym $mod+Shift+KP_8 mark "scratchpad8", move scratchpad
+bindsym $mod+KP_8 [con_mark="scratchpad8"] scratchpad show
+bindsym $mod+Shift+KP_9 mark "scratchpad9", move scratchpad
+bindsym $mod+KP_9 [con_mark="scratchpad9"] scratchpad show
