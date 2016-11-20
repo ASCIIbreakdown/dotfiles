@@ -27,7 +27,7 @@ Return a list of installed packages or nil for every skipped package."
 ;; Activate installed packages
 (package-initialize)
 
-(ensure-package-installed 'magit 'evil 'helm 'magit 'powerline)
+(ensure-package-installed 'magit 'evil 'helm 'magit 'powerline 'airline-themes)
 
 (setq custom-safe-themes t)
 
@@ -55,3 +55,5 @@ Return a list of installed packages or nil for every skipped package."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+(global-set-key (kbd "C-x g") 'magit-status)
