@@ -7,18 +7,8 @@
 (setq package-enable-at-startup nil)
 (package-initialize)
 
-(require 'evil)
-(evil-mode t)
-(require 'powerline)
-(setq powerline-arrow-shape 'arrow)
-(require 'helm-config)
-
 (defun ensure-package-installed (&rest packages)
   "Assure every package is installed, ask for installation if it’s not.
-
-(ensure-package-installed 'evil
-			  'helm
-			  'magit)
 
 Return a list of installed packages or nil for every skipped package."
   (mapcar
@@ -38,7 +28,13 @@ Return a list of installed packages or nil for every skipped package."
 (package-initialize)
 
 ;; Assuming you wish to install "iedit" and "magit"
-(ensure-package-installed 'iedit 'magit)
+(ensure-package-installed 'iedit 'magit 'evil 'helm 'magit 'powerline)
+
+(require 'evil)
+(evil-mode t)
+(require 'powerline)
+(setq powerline-arrow-shape 'arrow)
+(require 'helm-config)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -47,6 +43,7 @@ Return a list of installed packages or nil for every skipped package."
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes (quote (tango-dark)))
  '(helm-mode t)
+ '(package-selected-packages (quote (helm powerline magit iedit evil-visual-mark-mode)))
  '(size-indication-mode t)
  '(tool-bar-mode nil))
 (custom-set-faces
