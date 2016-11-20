@@ -27,17 +27,9 @@ Return a list of installed packages or nil for every skipped package."
 ;; Activate installed packages
 (package-initialize)
 
-(ensure-package-installed 'magit 'evil 'helm 'magit 'powerline 'airline-themes)
+(ensure-package-installed 'magit 'evil 'helm 'magit 'powerline 'airline-themes 'auto-complete)
 
 (setq custom-safe-themes t)
-
-(require 'evil)
-(evil-mode t)
-(require 'powerline)
-(require 'airline-themes)
-(setq powerline-arrow-shape 'arrow)
-(load-theme 'airline-cool)
-(require 'helm-config)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -46,7 +38,9 @@ Return a list of installed packages or nil for every skipped package."
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes (quote (tango-dark)))
  '(helm-mode t)
- '(package-selected-packages (quote (helm powerline magit iedit evil-visual-mark-mode)))
+ '(package-selected-packages
+   (quote
+    (auto-complete helm powerline magit iedit evil-visual-mark-mode)))
  '(size-indication-mode t)
  '(tool-bar-mode nil))
 (custom-set-faces
@@ -56,4 +50,12 @@ Return a list of installed packages or nil for every skipped package."
  ;; If there is more than one, they won't work right.
  )
 
+(require 'evil)
+(evil-mode t)
+(require 'powerline)
+(require 'airline-themes)
+(setq powerline-arrow-shape 'arrow)
+(load-theme 'airline-cool)
+(require 'helm-config)
+(ac-config-default)
 (global-set-key (kbd "C-x g") 'magit-status)
