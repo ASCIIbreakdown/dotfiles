@@ -27,25 +27,16 @@ Return a list of installed packages or nil for every skipped package."
 ;; Activate installed packages
 (package-initialize)
 
-;; Assuming you wish to install "iedit" and "magit"
-<<<<<<< HEAD
 (ensure-package-installed 'magit 'evil 'helm 'magit 'powerline)
 
 (setq custom-safe-themes t)
-=======
-(ensure-package-installed 'iedit 'magit 'evil 'helm 'magit 'powerline)
->>>>>>> 8c0cc322f6f66130f91aeaa92045df6418251f4e
 
 (require 'evil)
 (evil-mode t)
 (require 'powerline)
-<<<<<<< HEAD
 (require 'airline-themes)
 (setq powerline-arrow-shape 'arrow)
 (load-theme 'airline-cool)
-=======
-(setq powerline-arrow-shape 'arrow)
->>>>>>> 8c0cc322f6f66130f91aeaa92045df6418251f4e
 (require 'helm-config)
 
 (custom-set-variables
