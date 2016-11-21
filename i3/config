@@ -193,9 +193,6 @@ mode "$mode_launcher" {
 #compton
 exec compton
 
-#volumeicon
-#exec volumeicon
-
 #volumekeys
 bindsym XF86Launch6 exec amixer -D pulse set Master 5%+ unmute; exec pkill -RTMIN+10 i3blocks
 bindsym XF86Launch7 exec amixer -D pulse set Master 5%-; exec pkill -RTMIN+10 i3blocks
