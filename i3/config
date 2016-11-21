@@ -115,9 +115,7 @@ bindsym $mod+Shift+t exec i3-input -F 'rename workspace to "%s"' -P 'New workspa
 bindsym $mod+t exec i3-input -F 'workspace "%s"' -P 'Workspace name: '
 
 #assign windows to workspaces
-assign [class="Evolution"] Comms
-assign [class="Slack"] Comms
-assign [class="Cutegram"] Comms
+assign [class="Slack"] $workspace2
 
 #colors
 set $bg-color 	         #2f343f  
@@ -162,7 +160,7 @@ bindsym $mod+r mode "resize"
 # i3bar
 bar {
         #status_command i3status
-  strip_workspace_numbers yes
+	strip_workspace_numbers yes
 	status_command i3blocks -c ~/.config/i3/i3blocks.conf
 	colors {
 		background $bg-color
@@ -183,10 +181,10 @@ set $mode_launcher Launch: [f]irefox [c]hrome [s]lack [t]elegram
 bindsym $mod+o mode "$mode_launcher"
 mode "$mode_launcher" {
 	bindsym c exec google-chrome-stable, mode "default"
-	bindsym s workspace Comms, exec slack, mode "default"
-  bindsym t workspace Comms, exec telegram, mode "default"
-  bindsym f exec firefox, mode "default"
-  bindsym shift+f workspace Main, exec firefox, mode "default"
+	bindsym s workspace $workspace2, exec slack, mode "default"
+	bindsym t workspace $workspace2, exec telegram, mode "default"
+	bindsym f exec firefox, mode "default"
+	bindsym shift+f workspace $workspace1, exec firefox, mode "default"
 
 	bindsym Escape mode "default"
 	bindsym Return mode "default"
