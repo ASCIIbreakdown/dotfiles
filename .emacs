@@ -27,7 +27,7 @@ Return a list of installed packages or nil for every skipped package."
 ;; Activate installed packages
 (package-initialize)
 
-(ensure-package-installed 'magit 'evil 'helm 'magit 'powerline 'airline-themes 'auto-complete)
+(ensure-package-installed 'magit 'evil 'helm 'magit 'powerline 'airline-themes 'auto-complete 'quickrun)
 
 (setq custom-safe-themes t)
 
@@ -61,5 +61,6 @@ Return a list of installed packages or nil for every skipped package."
 (setq powerline-arrow-shape 'arrow)
 (load-theme 'airline-cool)
 (require 'helm-config)
+(require 'quickrun)
 (ac-config-default)
 (global-set-key (kbd "C-x g") 'magit-status)
