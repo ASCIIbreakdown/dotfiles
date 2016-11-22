@@ -62,5 +62,6 @@ Return a list of installed packages or nil for every skipped package."
 (load-theme 'airline-cool)
 (require 'helm-config)
 (require 'quickrun)
+(global-set-key (kbd "C-c r") 'quickrun)
 (ac-config-default)
 (global-set-key (kbd "C-x g") 'magit-status)
