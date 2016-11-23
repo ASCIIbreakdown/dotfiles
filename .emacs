@@ -65,3 +65,7 @@ Return a list of installed packages or nil for every skipped package."
 (global-set-key (kbd "C-c r") 'quickrun)
 (ac-config-default)
 (global-set-key (kbd "C-x g") 'magit-status)
+(defun toggle-comment-on-line ()
+  "comment or uncomment current line"
+  (interactive)
+  (comment-or-uncomment-region (line-beginning-position) (line-end-position)))
