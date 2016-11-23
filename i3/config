@@ -185,6 +185,7 @@ mode "$mode_launcher" {
 	bindsym t workspace $workspace2, exec telegram, mode "default"
 	bindsym f exec firefox, mode "default"
 	bindsym shift+f workspace $workspace1, exec firefox, mode "default"
+	bindsym e workspace $workspace3, exec emacs, mode "default"
 
 	bindsym Escape mode "default"
 	bindsym Return mode "default"
