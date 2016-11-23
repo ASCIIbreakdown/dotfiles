@@ -69,3 +69,4 @@ Return a list of installed packages or nil for every skipped package."
   "comment or uncomment current line"
   (interactive)
   (comment-or-uncomment-region (line-beginning-position) (line-end-position)))
+(electric-pair-mode)
