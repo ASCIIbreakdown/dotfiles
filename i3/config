@@ -32,7 +32,7 @@ bindsym $mod+Shift+d exec dmenu_run -sb "#2F343F"
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop 
 
 #lock the screen
-#bindsym $mod+Shift+x exec ~/.config/i3/lock.sh
+bindsym $mod+Shift+x exec ~/.config/i3/lock.sh
 
 # change focus
 bindsym $mod+j focus left
