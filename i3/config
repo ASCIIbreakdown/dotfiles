@@ -206,7 +206,7 @@ bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
 bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
 
 #background
-exec_always feh --bg-max ~/Pictures/rope.png
+exec_always feh --bg-max ~/background.png
 
 #drop down terminal
 bindsym XF86Tools exec xfce4-terminal --drop-down
