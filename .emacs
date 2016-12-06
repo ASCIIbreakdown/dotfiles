@@ -8,9 +8,6 @@
 (package-initialize)
 
 (defun ensure-package-installed (&rest packages)
-  "Assure every package is installed, ask for installation if it’s not.
-
-Return a list of installed packages or nil for every skipped package."
   (mapcar
    (lambda (package)
      (if (package-installed-p package)
@@ -52,6 +49,12 @@ Return a list of installed packages or nil for every skipped package."
  ;; If there is more than one, they won't work right.
  )
 
+(defun sudo-edit (&optional arg)
+  (interactive "P")
+  (if (or arg (not buffer-file-name))
+      (find-file (concat "/sudo:root@localhost:"
+                         (ido-read-file-name "Find file(as root): ")))
+    (find-alternate-file (concat "/sudo:root@localhost:" buffer-file-name))))
 (global-linum-mode t)
 
 (require 'evil)
@@ -65,6 +68,7 @@ Return a list of installed packages or nil for every skipped package."
 (global-set-key (kbd "C-c r") 'quickrun)
 (ac-config-default)
 (global-set-key (kbd "C-x g") 'magit-status)
+(global-set-key (kbd "C-x C-r") 'sudo-edit)
 (defun toggle-comment-on-line ()
   "comment or uncomment current line"
   (interactive)
