@@ -1,7 +1,7 @@
 #!/bin/bash
-ICON=/home/thom/icon.png
-TMPBG=/tmp/screen.png
+icon=/home/thom/icon.png
+tmpbg=/tmp/screen.png
 scrot /tmp/screen.png
-convert $TMPBG -scale 10% -scale 1000% $TMPBG
-convert $TMPBG $ICON -gravity center -composite -matte $TMPBG
-i3lock -i $TMPBG
+convert $tmpbg -blur 0x20 $tmpbg;
+convert $tmpbg $icon -gravity center -composite -matte $tmpbg
+i3lock -i $tmpbg
