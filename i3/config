@@ -188,7 +188,9 @@ exec compton
 
 #volumekeys
 bindsym XF86Launch6 exec amixer -D pulse set Master 5%+ unmute; exec pkill -RTMIN+10 i3blocks
+bindsym $mod+XF86Launch6 exec amixer -D pulse set Master 1%+ unmute; exec pkill -RTMIN+10 i3blocks
 bindsym XF86Launch7 exec amixer -D pulse set Master 5%-; exec pkill -RTMIN+10 i3blocks
+bindsym $mod+XF86Launch7 exec amixer -D pulse set Master 1%-; exec pkill -RTMIN+10 i3blocks
 bindsym XF86Launch8 exec amixer -D pulse set Master toggle; exec pkill -RTMIN+10 i3blocks
 bindsym --whole-window --border $mod+button5 exec amixer -D pulse set Master 5%-; exec pkill -RTMIN+10 i3blocks
 bindsym --whole-window --border $mod+button4 exec amixer -D pulse set Master 5%+ unmute; exec pkill -RTMIN+10 i3blocks
