@@ -162,7 +162,7 @@ bar {
 		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
 		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
 	}
-	tray_output HDMI-1
+	tray_output HDMI-0
 }
 
 # window title
