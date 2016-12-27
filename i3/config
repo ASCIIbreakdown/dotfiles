@@ -75,8 +75,8 @@ floating_modifier $mod
 #bindsym $mod+d focus child
 
 # workspaces
-set $workspace1 1:Main
-set $workspace2 2:Comms
+set $workspace1 1:Internet
+set $workspace2 2:Work
 set $workspace3 3:Term/Emacs
 set $workspace4 4:4
 set $workspace5 5:5
@@ -174,7 +174,7 @@ bindsym $mod+o mode "$mode_launcher"
 mode "$mode_launcher" {
 	bindsym c exec google-chrome-stable, mode "default"
 	bindsym s workspace $workspace2, exec slack, mode "default"
-	bindsym t workspace $workspace2, exec telegram, mode "default"
+	bindsym t exec telegram, mode "default"
 	bindsym f exec firefox, mode "default"
 	bindsym shift+f workspace $workspace1, exec firefox, mode "default"
 	bindsym e workspace $workspace3, exec emacs, mode "default"
