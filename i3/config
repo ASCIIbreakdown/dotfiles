@@ -25,7 +25,7 @@ bindsym $mod+Return exec xfce4-terminal
 bindsym $mod+Shift+q kill
 
 # run nmtui network config
-bindsym $mod+Shift+w exec xfce4-terminal -x nmtui
+bindsym $mod+Shift+w exec xfce4-terminal -x nmtui && i3-msg floating toggle
 
 # dmenu
 bindsym $mod+Shift+d exec dmenu_run -sb "#2F343F"
