@@ -249,6 +249,7 @@ exec_always feh --bg-max ~/background.png
 
 #drop down terminal
 bindsym XF86Tools exec xfce4-terminal --drop-down
+bindsym $mod+Escape exec xfce4-terminal --drop-down
 
 #media keys
 #bindsym XF86AudioPlay exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
