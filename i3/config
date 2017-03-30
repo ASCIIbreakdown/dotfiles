@@ -269,6 +269,8 @@ bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+x [title="Telegram"] scratchpad show
 bindsym $mod+Shift+a mark "scratchpadAlpha", move scratchpad
 bindsym $mod+a [con_mark="scratchpadAlpha"] scratchpad show
+bindsym $mod+Shift+b mark "scratchpadBeta", move scratchpad
+bindsym $mod+b [con_mark="scratchpadBeta"] scratchpad show
 bindsym $mod+Shift+KP_0 mark "scratchpad0", move scratchpad
 bindsym $mod+KP_0 [con_mark="scratchpad0"] scratchpad show
 bindsym $mod+Shift+KP_1 mark "scratchpad1", move scratchpad
